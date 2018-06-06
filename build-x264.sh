@@ -17,7 +17,7 @@ fi
 
 pushd x264
 git checkout $BRANCH
-./configure --enable-static
+./configure --enable-shared
 make
 VERSION=$(./version.sh | awk -F'[" ]' '/POINT/{print $4"+git"$5}')
 echo "x264 - Nuxeo version" > description-pak
