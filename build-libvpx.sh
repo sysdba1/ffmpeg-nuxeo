@@ -16,7 +16,7 @@ fi
 
 pushd libvpx
 git checkout $TAG
-./configure
+./configure --enable-shared
 make
 MAJOR=$(grep '#define VERSION_MAJOR' vpx_version.h | awk '{print $3}')
 MINOR=$(grep '#define VERSION_MINOR' vpx_version.h | awk '{print $3}')
